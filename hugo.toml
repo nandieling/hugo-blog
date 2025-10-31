@@ -1,8 +1,8 @@
-baseURL = 'https://googhub.nyc.mn/'
+baseURL = 'https://hugo.nandielinghai.de/'
 defaultContentLanguage = "zh"
 languageCode = "zh-Hans"
-title = '编程技术｜运维技术｜建站技巧｜后端开发｜前端开发｜知识库｜免费资源'
-description = "分享编程技术 Hugo 建站技巧、静态站点 SEO 优化、前端开发经验，帮助开发者打造高性能博客，免费资源。"
+title = '编程技术｜笔记'
+description = "编程笔记"
 theme = 'dream'
 
 # 内容目录配置
@@ -49,7 +49,7 @@ series = "series"
 # 网站完全打开前预加载动画
 enablePreLoad = true
 # 预加载的动画文字, 只有当enablePreLoad=true时生效
-textPreLoad   = "AiEDU"
+textPreLoad   = "nan"
 
 # 布局改为横栏模式，图在右面
 # zenMode = true
@@ -67,13 +67,13 @@ darkTheme = "forest"
 
 images = ["img/global-background.jpg"]
 
-author = "AiEDU"
-description = "Just do it!"
-avatar = "img/personal/avatar.png"
-headerTitle = "AiEDU | BLOG"
-motto = "AI 赋能，智启教育"
+author = "nan"
+description = ""
+avatar = "img/personal/崩坏3-格蕾修.png"
+headerTitle = "nan | BLOG"
+motto = ""
 
-footerBottomText = "知识改变命运，AI改变知识"
+footerBottomText = ""
 
 rss = true
 
@@ -86,11 +86,11 @@ rss = true
 # waline = true
 # walineServer = ""
 
-email = "aiedu985@gmail.com"
+email = ""
 
-siteStartYear = 2023
+siteStartYear = 2025
 
-favicon = 'img/personal/avatar.png'
+favicon = 'img/personal/崩坏3-格蕾修.png'
 
 # Syntax highlighting
 customSyntaxHighlighting = true
@@ -137,15 +137,15 @@ jsDateFormat = "yyyy年MM月dd日"
 
 # for peht theme
 #[params.Author]
-#name = "AiEDU"
-#avatar = "img/personal/avatar.png"
+#name = "nan"
+#avatar = "img/personal/崩坏3-格蕾修.png"
 
 [services]
 [services.googleAnalytics]
-ID = "G-7QPNK9FQQL"
+ID = ""
 
 [services.disqus]
-# shortname = "aiedu-1"
+# shortname = ""
 
 # 多个内容目录映射
 [module]
