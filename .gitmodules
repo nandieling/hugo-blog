@@ -3,5 +3,5 @@
 # 	url = https://github.com/g1eny0ung/hugo-theme-dream.git
 [submodule "content"]
 	path = content
-	url = https://github.com/nandieling/notes.git
+	url = https://github.com/nandieling/notes
     branch = main
