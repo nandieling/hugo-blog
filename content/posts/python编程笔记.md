@@ -1,7 +1,7 @@
 # <center> Python 编程-入门到实践笔记
 ## <center> 第一章 基础知识
 1. 终端运行python：
-```commandline
+```
 一. win: 
 1. CD 文件夹
 2. 显示文件夹下文件列表: dir
@@ -104,4 +104,110 @@ print(file_1)
 4. 删除指定位置元素：del lists[0]
 5. 删除指定位置元素，默认末尾：lists.pop(0)
 6. 删除指定值元素：remove('元素')
-7. 
+7. 列表按字母顺序排序：lists.sort()
+8. 列表按字母反向排序：lists.sort(reverse=True)
+9. 临时排序：lists.sorted()
+10. 列表长度：len(lists)
+
+# <center> 第四章 操作列表
+1. range(1, 5):返回1、2、3、4 四个数。
+2. range(1, 100, 2): range函数可设置步数。
+3. 列表最小值:min(lists)
+4. 列表最大值:max(lists)
+5. 列表求和:sum(lists)
+6. 列表推导式:
+```
+生成1到10的数，并将每个数平方，然后将平方数作为元素储存在列表中
+
+lists = [value**2 for value in range(1, 11)]
+```
+7. 习题4.3：使用一个循环打印1-20（含）。
+```
+number_lists(1-20).py
+
+number_lists = range(1, 21)
+for number in number_lists:
+    print(number)
+```
+8. 习题4.4：创建一个包含数 1～1000000 的列表，再使用一个 for 循环将这些数打印出来。
+```commandline
+number_lists(1-1000000).py
+
+number_lists = range(1, 100_0001)
+for number in number_lists:
+    print(number)
+```
+9. 习题4.5：创建一个包含数1～1000000的列表，再使用 min() 和 max() 核实该列表确实是从
+1 开始到1000000结束的。另外，对这个列表调用函数sum（）。
+```commandline
+number_lists_min_max_sum(1-1000000).py
+
+number_lists = range(1, 100_0001)
+number_lists_min = min(number_lists)
+number_lists_max = max(number_lists)
+number_lists_sum = sum(number_lists)
+
+print(number_lists_min)
+print(number_lists_max)
+print(number_lists_sum)
+
+```
+10. 习题4.6：通过给range()函数指定第三个参数来创建一个列表，其中包含1～20的奇数；再使用一个
+for循环将这些数打印
+```commandline
+number_lists_odd(1-20).py
+
+odd_number_lists = range(1, 21, 2)
+for odd_number in odd_number_lists:
+    print(odd_number)
+```
+11. 习题4.7：创建一个列表，其中包含 3～30 内能被 3 整除的数，再使用一个 for 循环将这个列表
+中的数打出来。
+```commandline
+multiple_3_lists.py
+
+multiple_3_lists = range(3, 31, 3)
+for multiple_3 in multiple_3_lists:
+    print(multiple_3)
+```
+12. 习题4.8：将同一个数乘三次称为立方。例如，在 Python 中，2 的立方用 2**3 表示。创建
+一个列表，其中包含前 10 个整数（1～10）的立方，再使用一个 for 循环将这些立方数打印出来。
+```commandline
+cube_lists(1-10).py
+
+cube_lists = [ value**3 for value in range(1, 11)]
+for cube_number in cube_lists:
+    print(cube_number)
+```
+13. 列表切片：lists[0, 3]:返回列表0-2的元素。也可不指定开头或末尾。
+14. 习题4.10：选择你在本章编写的一个程序，在末尾添加几行代码，以完成如下任务。
+打印消息“The first three items in the list are:”，再使用切片来打印列表的前三个元素。
+打印消息“Three items from the middle of the list are:”，再使用切片来打印列表中间的三个元素。
+打印消息“The last three items in the list are:”，再使用切片来打印列表末尾的三个元素。
+```commandline
+slice_lists.py
+
+lists = range(1, 11)
+
+notice_first_three = "The first three items in the list are:"
+print(notice_first_three)
+
+for number_first_three in lists[:3]:  # 打印列表前三个元素
+    print(number_first_three)
+
+notice_middle_three = "Three items from the middle of the list are:"
+print(notice_middle_three)
+
+middle_number = int(10/2)
+for number_middle_three in lists[middle_number-1:middle_number+2]: # 打印列表中间的三个元素
+    print(number_middle_three)
+
+notice_last_three = "The last three items in the list are:"
+print(notice_last_three)
+
+for number_last_three in lists[-3:]:    # 打印列表最后的三个元素
+    print(number_last_three)
+```
+15. 元组(tuple)：不可修改元素，但可重新定义元组。tuple = (1, 2 , 3)
+# <center>  第五章 if语句
+
