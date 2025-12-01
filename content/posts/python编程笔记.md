@@ -403,17 +403,15 @@ lottery.py
 
 from random import choice
 
-def win_lottery(lottery_lists):     # 从奖池号码中随机抽取4个号码并返回调用
+def win_lottery_number():     # 从奖池号码中随机抽取4个号码并返回调用
+    lottery_lists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     winners_numbers = []
     for i in range(4):
         winners_number = choice(lottery_lists)
         winners_numbers.append(winners_number)
-    return winners_numbers
+    print(winners_numbers)
 
-lottery_lists_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
-winners_numbers_1 = win_lottery(lottery_lists_1 )
-print(winners_numbers_1)
-
+win_lottery_number()
 
 ```
 7. 习题9.15：彩票分析 可以使用一个循环来理解中前述彩票中奖有多难。为此，创建一个名为my_ticket的
@@ -424,27 +422,27 @@ lottery_tries.py
 
 from random import choice
 
-def win_lottery(lottery_lists): # 从奖池号码中随机抽取4个号码并返回调用
-    winners_numbers = []
+def win_lottery(): # 从奖池号码中随机抽取4个号码并返回调用
+    lottery_lists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+    winner_numbers = []
     for i in range(4):
-        winners_number = choice(lottery_lists)
-        winners_numbers.append(winners_number)
-    return winners_numbers
+        winner_number = choice(lottery_lists)
+        winner_numbers.append(winner_number)
+    return winner_numbers
 
 def tries_numbers():    # 从奖池号码中循环随机抽取4个号码，直到和中奖号码相同，返回循环次数
-    lottery_lists = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+
     my_ticket = [1, 3, 5, 7]
     tries_number = 0
     active = True
     while active:
-        new_winning_ticket = win_lottery(lottery_lists)
+        new_winer_numbers= win_lottery()
         tries_number = tries_number + 1
-        if new_winning_ticket == my_ticket:
+        if new_winer_numbers == my_ticket:
             active = False
-    return tries_number
+    print(f"{tries_number}")
 
-tries_number_1 = tries_numbers()
-print(tries_number_1)
+tries_numbers()
 
 ```
 ## <center> 第10章 文件和异常
