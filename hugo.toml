@@ -106,7 +106,7 @@ reorderNavItems = ["home", "categories", "tags", "posts", "tools", "docs", "sear
 # 是否折叠显示导航菜单
 #collapseNavItems = ["posts", "categories", "tags", "rss"]
 # 是否显示默认的封面图
-# noDefaultSummaryCover = true
+noDefaultSummaryCover = true
 
 # 是否显示文章目录
 showTableOfContents = true
