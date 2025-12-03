@@ -62,8 +62,8 @@ lightTheme = "emerald"
 # 当暗色时候，选择森林配色
 darkTheme = "forest"
 
-backgroundImage = "img/personal/1.jpg.jpg"
-# backgroundImageDark = ""
+backgroundImage = "img/personal/1.jpg"
+backgroundImageDark = "img/personal/1.jpg"
 
 images = ["img/personal/1.jpg"]
 
