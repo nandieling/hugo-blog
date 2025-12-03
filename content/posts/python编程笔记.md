@@ -592,4 +592,132 @@ def get_favorite_number():
 
 get_favorite_number()
 ```
-14. 用户字典 示例 remember_me.py 只存储了一项信息——用户名。请扩展该示例
+14. 习题10.12 用户字典 示例 remember_me.py 只存储了一项信息——用户名。请扩展该示例，让用户同时提供另外
+两项信息，再将收集到的所有信息存储到一个字典中。使用json.dumps()将这个字典写入文件，并使用
+json.loads()从文件中读取它。打印一条摘要消息，指出程序记住了有关用户的那些信息。
+```commandline
+from pathlib import Path
+import json
+
+def get_person_information():
+    person_information = {'name':'', 'age':'', 'height':''}
+    path = Path('person_information.json')
+    if path.exists():
+        contents = path.read_text()
+    else:
+        name = input('Enter your name: ')
+        age = input('Enter your age: ')
+        height = input('Enter your height: ')
+        contents = json.dumps({'name': name, 'age': age, 'height': height})
+        path.write_text(contents)
+
+    person_information = json.loads(contents)
+    print(f"Your name is {person_information['name']}, and your age is "
+          f"{person_information['age']}, and your height is "
+          f"{person_information['height']}.")
+
+get_person_information()
+```
+## <center> 第11章 测试代码
+1. 测试文件以test_打头，测试函数也以test_打头。
+2. 在终端进行测试，进入测试文件见，输入:pytest
+3. assert:断言
+4. 习题11.1 城市和国家 编写一个函数，它接受两个形参：一个城市名和一个国家名。这个函数返回一个格式
+为City, Country 的字符串，如 Santiago, Chile。将这个函数存储在一个名为city_functions.py
+的模块中，以免pytest 在运行时，尝试运行之前编写的测试。创建一个名为test_cities.py的程序，对刚
+编写的函数进行测试。编写一个名为test_city_country()的函数，核实在使用类似于'santiago' 和
+'chile'这样的值来调用该函数时，得到的字符串是正确的。进行测试，确认test_city_country()通过了。
+```commandline
+city_functions.py
+
+def city_functions(city, country):
+    city_function = f"{city}, {country}"
+    return city_function
+
+test_city_functions.py
+from city_functions import city_functions
+def test_city_functions():
+    city_function_1 = city_functions('Santiago', 'Chile')
+    assert city_function_1 == 'Santiago, Chile'
+
+```
+5. 习题11.2 人口数量 修改前面的函数，是其包含第三个必不可少的形参population，并返回一个格式
+为City, Country -  population xxx 的字符串。如 Santiago, Chile - population 
+5000000 运行测试，确认test_city_country()未通过。修改上述函数，将形参population 设置为
+可选的。再次运行测试，确认test_city_country()又通过了。再编写一个名为test_city_country_
+population()的测试，核实可以使用类似于'santiago'、'chile'和'population=5000000'这样
+的值来调用这个函数。再次运行测试，确认test_city_country_population()通过了。
+```commandline
+city_functions.py
+
+def city_functions(city, country, population=None):
+    if population:
+        city_function = f"{city}, {country}, population - {population}"
+    else:
+        city_function = f"{city}, {country}"
+    return city_function
+
+test_city_functions.py
+
+from city_functions import city_functions
+def test_city_functions():
+    city_function_1 = city_functions('Santiago', 'Chile',5000000)
+    assert city_function_1 == 'Santiago, Chile, population - 5000000'
+```
+6. 常用断言
+
+| 断言                         | 用途        |
+|----------------------------|-----------|
+| assert a == b              | 断言两个值相等   |
+| assert a != b              | 断言两个值不相等  |
+| assert a                   | 断言a的布尔值为真 |
+| assert not a               | 断言a的布尔值为假 |
+
+| assert element in list     | 断言元素再列表中  |
+| assert element not in list | 断言元素不在列表中 |
+7. 装饰器 @pytest.fixture:设定一个函数供其它测试函数调用。
+8. 习题11.3：雇员 编写一个名为Employee的类，其__init__()方法接受名、姓和年薪，并将它们都
+存储在属性中。编写一个名为give_raise()的方法，它默认将年薪增加5000美元，同时能够接受其他的
+年薪增加量。为Employee 类编写一个测试文件，其中包含两个测试函数：test_give_default_raise()
+和test_give_custom_raise().在不使用夹具的情况下编写这两个测试，并确保它们都通过了。然后，编写
+一个夹具，以免在每个测试函数中都创建一个Employee对象。重新运行测试，确认两个测试都通过了。
+```commandline
+test_employee.py
+
+import pytest
+
+from employee import Employee
+
+def test_give_default_raise():
+    first_name = 'nan'
+    last_name = 'die'
+    employee_1 = Employee(first_name, last_name, annual_salary=5000)
+    annual_salary_1 = employee_1.give_annual_salary()
+    assert annual_salary_1 == 10000
+
+def test_give_custom_raise():
+    first_name = 'nan'
+    last_name = 'die'
+    employee_2 = Employee(first_name, last_name, annual_salary=5000)
+    annual_salary_2 = employee_2.give_annual_salary(10000)
+    assert annual_salary_2 == 15000
+
+
+test_employee_1.py
+import pytest
+from employee import Employee
+
+@pytest.fixture
+def employee_1():
+    return Employee('<NAME>', '<NAME>', annual_salary=5000)
+
+def test_give_default_raise(employee_1):
+
+    annual_salary_1 = employee_1.give_annual_salary()
+    assert annual_salary_1 == 10000
+
+def test_give_custom_raise(employee_1):
+
+    annual_salary_2 = employee_1.give_annual_salary(10000)
+    assert annual_salary_2 == 15000
+```
