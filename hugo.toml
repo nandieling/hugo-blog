@@ -62,10 +62,10 @@ lightTheme = "emerald"
 # 当暗色时候，选择森林配色
 darkTheme = "forest"
 
-# backgroundImage = "img/global-background.jpg"
+# backgroundImage = "img/personal/1.jpg.jpg"
 # backgroundImageDark = ""
 
-images = ["img/global-background.jpg"]
+images = ["img/personal/1.jpg"]
 
 author = "nan"
 description = ""
