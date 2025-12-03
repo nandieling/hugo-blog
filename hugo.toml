@@ -62,8 +62,8 @@ lightTheme = "emerald"
 # 当暗色时候，选择森林配色
 darkTheme = "forest"
 
-backgroundImage = "img/personal/1.jpg"
-backgroundImageDark = "img/personal/1.jpg"
+# backgroundImage = "img/personal/1.jpg"
+# backgroundImageDark = "img/personal/1.jpg"
 
 images = ["img/personal/1.jpg"]
 
@@ -106,7 +106,7 @@ reorderNavItems = ["home", "categories", "tags", "posts", "tools", "docs", "sear
 # 是否折叠显示导航菜单
 #collapseNavItems = ["posts", "categories", "tags", "rss"]
 # 是否显示默认的封面图
-noDefaultSummaryCover = true
+# noDefaultSummaryCover = true
 
 # 是否显示文章目录
 showTableOfContents = true
