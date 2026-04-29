@@ -1,10 +1,13 @@
 # Go to https://ionic.io/ionicons to find available icons.
 socials = [
-  { href = "https://github.com/88899", target = "_blank", icon = "logo-github", title = "GitHub" },
-  { href = "https://x.com/mykenwayne", target = "_blank", icon = "logo-x", title = "X" },
+  # { href = "https://github.com/88899", target = "_blank", icon = "logo-github", title = "GitHub" },
+  { href = "https://github.com/nandieling/hai", target = "_blank", icon = "logo-github", title = "GitHub" },
+  # { href = "https://x.com/mykenwayne", target = "_blank", icon = "logo-x", title = "X" },
+  { href = "tencent://message/?uin=2522577023&Site=&Menu=yes", icon = "chatbubble-ellipses", title = "QQ" },
+  { href = "https://qun.qq.com/universal-share/share?ac=1&authKey=UPrFoV%2FkyaYOUaq65Ee5UA3TprLA3%2BYfuzFmMcg%2FZX5ZxqGFEC%2F%2Bl%2FeggIbKUXrm&busi_data=eyJncm91cENvZGUiOiI5NTE2OTA4ODQiLCJ0b2tlbiI6InpwKzRMY2RRQ2pJVUdkdHNzYU01ZGZQeUlmQks5dHNUTDJqTE9JcnQ5dElxR3FCSlJPTWRRemk0RHRlUlJBVXgiLCJ1aW4iOiIyNTIyNTc3MDIzIn0%3D&data=nCaso3U5JFWihyS045q3pXrDZRzQkFFV2bnwGHmK1ytobbHMtWJ4CiMuPe7x9L9IOR2sLHZYWn8gHYgBDP7I4A&svctype=4&tempid=h5_group_info", target = "_blank", icon = "chatbubbles", title = "QQ群" } 
   # { href = "https://facebook.com/mykenwayne", target="_blank", icon = "logo-facebook", title = "Facebook" },
   # { href = "https://instagram.com/mykenwayne", target="_blank", icon = "logo-instagram", title = "Instagram" },
-  { href = "https://www.linkedin.com/in/mykenwayne", target = "_blank", icon = "logo-linkedin", title = "Linkedin" },
-  { href = "https://stackoverflow.com/users/5676489/mykenwayne", target = "_blank", icon = "logo-stackoverflow", title = "stack overflow" },
+  # { href = "https://www.linkedin.com/in/mykenwayne", target = "_blank", icon = "logo-linkedin", title = "Linkedin" },
+  # { href = "https://stackoverflow.com/users/5676489/mykenwayne", target = "_blank", icon = "logo-stackoverflow", title = "stack overflow" },
   # { href = "https://codepen.io/mykenwayne", target="_blank", icon = "logo-codepen", title = "Codepen" },
 ]
