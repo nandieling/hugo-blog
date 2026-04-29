@@ -101,7 +101,7 @@ stickyNav = true
 
 # 导航菜单选项
 # remove rss
-reorderNavItems = ["home", "categories", "tags", "posts", "tools", "docs", "search", "github", "about"]
+reorderNavItems = ["home", "categories", "tags", "posts", "search", "github", "about"]
 
 # 是否折叠显示导航菜单
 #collapseNavItems = ["posts", "categories", "tags", "rss"]
@@ -122,8 +122,8 @@ twitter = "dgdghub"
 [params.navItems]
 home = { href = "/", icon = "home", title = "首页" }
 github = { href = "https://github.com/88899", icon = "logo-github", title = "GitHub" }
-tools = { href = "https://www.518855.xyz", icon = "rocket", title = "导航" }
-docs = { href = "https://cici.pp.ua", icon = "documents", title = "文档" }
+# tools = { href = "https://www.518855.xyz", icon = "rocket", title = "导航" }
+# docs = { href = "https://cici.pp.ua", icon = "documents", title = "文档" }
 # me = { href = "https://985188.xyz", icon = "person", title = "About" }
 
 [params.advanced]
