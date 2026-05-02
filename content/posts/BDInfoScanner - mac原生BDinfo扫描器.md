@@ -1,6 +1,6 @@
 ---
 title: "mac原生BDinfo"
-date: 2026-05-2T20:00:00+08:00
+date: 2026-05-02T20:00:00+08:00
 lastmod: 2025-12-03T17:00:00+08:00
 image: https://img2.pixhost.to/images/7605/721499096_2.png
 images:
